@@ -27,10 +27,8 @@ class MainActivity : AppCompatActivity() {
                 viewsCount.text = converterNumToString(post.postViews)
                 like.setImageResource(
                     if (post.likedByMe) {
-                        likeCount.text = converterNumToString(post.likes)
                         R.drawable.ic_liked_24
                     } else {
-                        likeCount.text = converterNumToString(post.likes)
                         R.drawable.ic_like_24
                     }
                 )
