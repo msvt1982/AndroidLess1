@@ -43,6 +43,7 @@ dependencies {
     implementation libs.androidx.constraintlayout
     implementation libs.androidx.lifecycle.viewmodel
     testImplementation libs.junit
+    implementation libs.google.gson
 
     implementation libs.androidx.lifecycle.livedata.ktx
 }
