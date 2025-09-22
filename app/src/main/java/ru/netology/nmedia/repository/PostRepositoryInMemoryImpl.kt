@@ -6,6 +6,7 @@ import ru.netology.nmedia.dto.Post
 
 class PostRepositoryInMemoryImpl : PostRepository {
 
+    private var indexId = 1L
     private var posts = listOf(
         Post(
             id = 9,
@@ -102,6 +103,30 @@ class PostRepositoryInMemoryImpl : PostRepository {
             if (it.id == id) {
                 it.copy(share = it.share + 1)
             } else it
+        }
+        data.value = posts
+    }
+
+    override fun removeById(id: Long) {
+        posts = posts.filter { it.id != id }
+        data.value = posts
+    }
+
+    override fun save(post: Post) {
+        if (post.id == 0L) {
+            posts = listOf(
+                post.copy(
+                    id = indexId++,
+                    author = "Me",
+                    likedByMe = false,
+                    published = "Now",
+                )
+            ) + posts
+            data.value = posts
+            return
+        }
+        posts = posts.map {
+            if (it.id != post.id) it else it.copy(content = post.content)
         }
         data.value = posts
     }
