@@ -14,12 +14,15 @@ constraintlayout = "2.1.4"
 viewbinding = "8.1.0-alpha10"
 #extensions = "1.1.1"
 lifecycleViewmodel = "2.9.4"
+navigationFragmentKtx = "2.9.0"
 gson = "2.13.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensions", version.ref = "lifecycleLivedataKtx" }
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version = "2.9.4" }
+androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
 androidx-lifecycle-livedata-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-livedata-ktx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.9.4" }
 androidx-lifecycle-viewmodel-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-viewmodel-ktx" }

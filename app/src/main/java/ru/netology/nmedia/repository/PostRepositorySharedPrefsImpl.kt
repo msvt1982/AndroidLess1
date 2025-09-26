@@ -14,7 +14,7 @@ class PostRepositorySharedPrefsImpl(context: Context) : PostRepository {
     private var posts = emptyList<Post>()
         set(value){
             field = value
-            data.value = posts
+            data.value = value
             sync()
         }
     private var indexId = 1L

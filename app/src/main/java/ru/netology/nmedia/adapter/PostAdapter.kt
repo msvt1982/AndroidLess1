@@ -19,6 +19,7 @@ interface OnInteractionListener {
     fun onRemove(post: Post) {}
     fun onShare(post: Post) {}
     fun onVideo(post: Post) {}
+    fun onMoveToSinglePost(post: Post) {}
 }
 
 class PostAdapter(
@@ -58,6 +59,9 @@ class PostViewHolder(
         shareButton.setOnClickListener {
             onInteractionListener.onShare(post)
         }
+        cardPost.setOnClickListener {
+            onInteractionListener.onMoveToSinglePost(post)
+        }
         menu.setOnClickListener {
             PopupMenu(it.context, it).apply {
                 inflate(R.menu.menu_post)
@@ -83,7 +87,7 @@ class PostViewHolder(
             videoGroup.visibility = View.GONE
         } else {
             videoGroup.visibility = View.VISIBLE
-            urlText.text = post.videoUrl.toString()
+            urlText.text = post.videoUrl
             videoGroup.setOnClickListener {
                 onInteractionListener.onVideo(post)
             }

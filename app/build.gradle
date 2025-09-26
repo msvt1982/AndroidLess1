@@ -46,4 +46,6 @@ dependencies {
     implementation libs.google.gson
 
     implementation libs.androidx.lifecycle.livedata.ktx
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
 }
