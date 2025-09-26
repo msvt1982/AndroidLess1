@@ -1,26 +1,42 @@
 [versions]
-agp = "8.11.1"
+agp = "8.11.2"
 kotlin = "2.0.21"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 appcompat = "1.6.1"
-material = "1.10.0"
+lifecycleLivedataKtx = "2.8.7"
+lifecycleViewmodelKtx = "2.8.7"
+material = "1.12.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
 viewbinding = "8.1.0-alpha10"
+#extensions = "1.1.1"
+lifecycleViewmodel = "2.9.4"
+navigationFragmentKtx = "2.9.0"
+gson = "2.13.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensions", version.ref = "lifecycleLivedataKtx" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version = "2.9.4" }
+androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
+androidx-lifecycle-livedata-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-livedata-ktx" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.9.4" }
+androidx-lifecycle-viewmodel-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-viewmodel-ktx" }
+google-gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-activity = { group = "androidx.activity", name = "activity", version = "1.10.0" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-viewbinding = { group = "androidx.databinding", name = "viewbinding", version.ref = "viewbinding" }
+#extensions = { group = "android.arch.lifecycle", name = "extensions", version.ref = "extensions" }
+androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "lifecycleViewmodel" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
