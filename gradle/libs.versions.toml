@@ -1,6 +1,6 @@
 [versions]
 agp = "8.11.2"
-kotlin = "2.0.21"
+kotlin = "2.2.0"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -16,6 +16,8 @@ viewbinding = "8.1.0-alpha10"
 lifecycleViewmodel = "2.9.4"
 navigationFragmentKtx = "2.9.0"
 gson = "2.13.1"
+roomCompiler = "2.7.2"
+ksp = "2.2.0-2.0.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -23,6 +25,8 @@ androidx-lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensi
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version = "2.9.4" }
 androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomCompiler" }
 androidx-lifecycle-livedata-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-livedata-ktx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.9.4" }
 androidx-lifecycle-viewmodel-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-viewmodel-ktx" }
@@ -41,3 +45,5 @@ androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
